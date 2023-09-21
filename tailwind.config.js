@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         'clash-bold': 'Clash Display Bold',
         'clash-semibold': 'Clash Display Semibold',
+        'made-tommy-bold': 'Made Tommy Outline Extra Bold',
         'montserrat': ["Montserrat", "sans"],
         'unica': ["Unica One", "cursive"],
       },
@@ -19,7 +20,8 @@ export default {
             "two": "#903AFF",
             "three": "#D434FE",
             "gradient": "linear-gradient(90deg, #D434FE 0%, #903AFF 100%)",
-          }
+          },
+          pink: "#FF26B9"
         }
       }
     },

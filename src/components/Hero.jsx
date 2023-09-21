@@ -61,7 +61,7 @@ const Hero = () => {
                           getlinked Tech <br/>
                       </span>
                       <span className="flex items-center">
-                          Hackathon <span>1.0</span>
+                          Hackathon <span className="text-custom-purple-three">1.0</span>
                           <img src={chain} alt="chain icon" className="w-8 md:w-12 lg:w-20" />
                           <img src={blast} alt="chablastin icon" className="w-8 md:w-12 lg:w-20" />
                       </span>

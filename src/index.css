@@ -35,6 +35,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Made Tommy Outline Extra Bold';
+  src: url('./assets/fonts/made-tommy-outline-extra-bold.otf') format('opentype');
+  /* Optional: Specify font-weight and font-style */
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 a {
   font-weight: 500;

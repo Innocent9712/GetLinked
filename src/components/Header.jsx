@@ -4,6 +4,7 @@ import hamburger from "../assets/icons/hamburger.svg"
 import cancel from "../assets/icons/cancel.svg"
 import {motion} from "framer-motion"
 import { useCallback, useEffect, useRef, useState } from "react"
+import { Link as ScrollLink } from 'react-scroll';
 
 const Header = () => {
 
@@ -65,19 +66,19 @@ const buttonRef = useRef();
                 <MediaQuery minWidth={768}>
                     <ul className="font-montserrat flex gap-6 lg:gap-12 text-sm">
                         <li>
-                            <NavLink to={"/#timeline"} className={"text-white"} >
+                            <ScrollLink to={"timeline"} smooth={true} duration={500} className={"text-white"} >
                                 Timeline
-                            </NavLink>
+                            </ScrollLink>
                         </li>
                         <li>
-                            <NavLink to={"/#overview"} className={"text-white"} >
+                            <ScrollLink to={"overview"} smooth={true} duration={500} className={"text-white"} >
                                 Overview
-                            </NavLink>
+                            </ScrollLink>
                         </li>
                         <li>
-                            <NavLink to={"/#faqs"} className={"text-white"} >
+                            <ScrollLink to={"faqs"} smooth={true} duration={500} className={"text-white"} >
                                 FAQs
-                            </NavLink>
+                            </ScrollLink>
                         </li>
                         <li>
                             <NavLink to={"contact"} className={({isActive}) => `${isActive ? "bg-clip-text text-transparent bg-gradient-to-r from-custom-purple-three to-custom-purple-two font-bold": "text-white"}`} >
