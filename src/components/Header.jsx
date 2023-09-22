@@ -54,7 +54,7 @@ const buttonRef = useRef();
 
   return (
     <header
-        className=" pt-12 relative border-b border-white pb-6 border-opacity-25"
+        className="pt-12 relative border-b border-white pb-6 border-opacity-25"
     >
         <div className="flex justify-between max-w-[90rem] w-[75%] md:w-[85%] mx-auto items-center">
             <Link to={"/"}>
@@ -65,17 +65,17 @@ const buttonRef = useRef();
             <div className="md:basis-[70%] md:flex md:justify-end items-center md:gap-8 lg:gap-[12rem]">
                 <MediaQuery minWidth={768}>
                     <ul className="font-montserrat flex gap-6 lg:gap-12 text-sm">
-                        <li>
+                        <li className="hover:cursor-pointer focus:cursor-pointer" tabIndex={1}>
                             <ScrollLink to={"timeline"} smooth={true} duration={500} className={"text-white"} >
                                 Timeline
                             </ScrollLink>
                         </li>
-                        <li>
+                        <li className="hover:cursor-pointer focus:cursor-pointer" tabIndex={1}>
                             <ScrollLink to={"overview"} smooth={true} duration={500} className={"text-white"} >
                                 Overview
                             </ScrollLink>
                         </li>
-                        <li>
+                        <li className="hover:cursor-pointer focus:cursor-pointer" tabIndex={1}>
                             <ScrollLink to={"faqs"} smooth={true} duration={500} className={"text-white"} >
                                 FAQs
                             </ScrollLink>

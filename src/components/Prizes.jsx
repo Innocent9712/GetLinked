@@ -1,4 +1,4 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
 import cup from "../assets/icons/cup.svg"
 import gold_medal from "../assets/icons/gold_medal.svg"
 import silver_medal from "../assets/icons/silver_medal.svg"
@@ -19,9 +19,6 @@ const MedalComponent = ({ image, position, reward, color, middle}) => {
 
             </div>
         </li>
-        // <div className="flex flex-col justify-center items-center">
-        //     <p className="text-center text-white text-2xl font-bold">{reward}</p>
-        // </div>
     )
 }
 

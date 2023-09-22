@@ -18,8 +18,10 @@ const Layout = () => {
           <img src={flare_2} alt="lens flare" className="absolute top-0 md:right-0 z-[-10px] opacity-60" />
         </MediaQuery>
         <div className="absolute top-0 left-0 w-full h-full bg-custom-purple-one opacity-30 z-[9px] mix-blend-hue"></div>
-        <Header />
-        <main>
+        <div className="fixed top-0 bg-custom-purple-one w-full z-10">
+          <Header />
+        </div>
+        <main className="pt-24">
             <Outlet />
         </main>
     </div>
