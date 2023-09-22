@@ -98,7 +98,7 @@ const QuestionList = () => {
 
 const Faq = () => {
   return (
-    <section className="mt-12 lg:mt-24" id="faqs">
+    <section className="mt-12 lg:mt-24 border-b border-white pb-6 border-opacity-25" id="faqs">
       <div className="flex flex-col md:flex-row md:justify-center items-center max-w-[90rem] mx-auto ">
         <div className="md:basis-5/12">
           <h3 className="font-clash-bold text-lg md:text-2xl lg:text-4xl text-center lg:text-left">Frequently Asked <br/> <span className="text-custom-purple-three">Questions</span></h3>
