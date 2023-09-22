@@ -1,9 +1,8 @@
-import React from 'react'
 import { Link } from 'react-scroll'
 
 const Footer = () => {
   return (
-    <footer className='bg-custom-purple-four bg-blend-multiply bg-opacity-80 py-12 font-montserrat text-sm'>
+    <footer className='bg-custom-purple-four bg-blend-multiply bg-opacity-80 py-16 font-montserrat text-sm'>
         <div className='w-[80%] max-w-[90rem] mx-auto'>
             <div className='flex flex-wrap gap-y-16 mb-24 justify-between'>
                 <div className='basis-full lg:basis-[50%]'>

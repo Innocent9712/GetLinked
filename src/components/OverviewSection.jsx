@@ -156,7 +156,7 @@ const slideInFromRightVariants = {
 };
 
 // eslint-disable-next-line react/prop-types
-const Sample = ({ reverse, image, textItems }) => {
+const Overview = ({ reverse, image, textItems }) => {
   const controls = useAnimation();
   const isTabletOrLarger = useMediaQuery({ minWidth: 768 });
   const ref = useRef(null)
@@ -232,4 +232,4 @@ const Sample = ({ reverse, image, textItems }) => {
   );
 };
 
-export default Sample;
+export default Overview;

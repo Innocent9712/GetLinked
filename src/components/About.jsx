@@ -58,7 +58,7 @@ const About = () => {
         </button>
     ]
   return (
-    <section className="mt-6" id="overview">
+    <section className="relative bg-custom-purple-four bg-opacity-20  mt-6" id="overview">
         <div className="border-b border-white pb-6 border-opacity-25">
             <AnimatedSection image={idea} textItems={part1} reverse={false} />
         </div>

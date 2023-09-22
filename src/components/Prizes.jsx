@@ -9,7 +9,7 @@ const MedalComponent = ({ image, position, reward, color, middle}) => {
     return (
         <li className={`basis-1/3 ${middle ? "" : "mb-8"}`}>
             <div className={`relative rounded-md border border-${color} bg-${color} w-full bg-opacity-30`}>
-                <div className={` absolute inset-1/2 transform -translate-x-1/2  w-full ${middle ? "w-[10rem] top-[-6.5rem] lg:w-56 lg:top-[-9.5rem]" : "top-[-5rem] lg:top-[-7rem]"}`}>
+                <div className={` absolute inset-1/2 transform -translate-x-1/2  w-full ${middle ? "w-[9rem] top-[-6.5rem] lg:w-56 lg:top-[-9.5rem]" : "top-[-5rem] lg:top-[-7rem]"}`}>
                 {/* <div> */}
                     <img src={image} alt={reward} className={`w-full`} />
                 </div>
@@ -25,7 +25,7 @@ const MedalComponent = ({ image, position, reward, color, middle}) => {
 
 const Prizes = () => {
   return (
-    <section className="mt-12 lg:mt-24 mb-12 flex justify-center" id="">
+    <section className="relative mt-12 lg:mt-24 mb-12 py-24 flex justify-center" id="">
         <div className='w-[80%] max-w-6xl grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-4 gap-4'>
             <div className='lg:col-span-2 lg:col-start-3 lg:row-start-1 lg:row-span-1  text-center lg:text-left flex  items-start justify-center'>
                 {/* This is the first div */}
