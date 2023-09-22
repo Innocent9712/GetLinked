@@ -117,22 +117,22 @@ const buttonRef = useRef();
                         </div>
                         <ul className="font-montserrat flex flex-col items-start gap-8 text-sm my-10">
                             <li>
-                                <NavLink to={"/#timeline"} className={"text-white font-bold"} >
+                                <ScrollLink to={"timeline"} smooth={true} duration={500} className={"text-white"} onClick={() => setIsHidden(true)} >
                                     Timeline
-                                </NavLink>
+                                </ScrollLink>
                             </li>
                             <li>
-                                <NavLink to={"/#overview"} className={"text-white font-bold"} >
+                                <ScrollLink to={"overview"} smooth={true} duration={500} className={"text-white"} onClick={() => setIsHidden(true)} >
                                     Overview
-                                </NavLink>
+                                </ScrollLink>
                             </li>
                             <li>
-                                <NavLink to={"/#faqs"} className={"text-white font-bold"} >
+                                <ScrollLink to={"faqs"} smooth={true} duration={500} className={"text-white"} onClick={() => setIsHidden(true)} >
                                     FAQs
-                                </NavLink>
+                                </ScrollLink>
                             </li>
                             <li>
-                                <NavLink to={"contact"} className={({isActive}) => `font-bold ${isActive ? "bg-clip-text text-transparent bg-gradient-to-r from-custom-purple-three to-custom-purple-two": "text-white"}`} >
+                                <NavLink to={"contact"} className={({isActive}) => `font-bold ${isActive ? "bg-clip-text text-transparent bg-gradient-to-r from-custom-purple-three to-custom-purple-two": "text-white"}`} onClick={() => setIsHidden(true)} >
                                     Contact
                                 </NavLink>
                             </li>

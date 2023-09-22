@@ -4,6 +4,7 @@ import Header from "./Header"
 import flare_1 from "../assets/images/lens-flare-hero-left.png"
 import flare_2 from "../assets/images/lens-flare-hero-right.png"
 import MediaQuery from "react-responsive"
+import Footer from "./Footer"
 
 
 
@@ -24,6 +25,7 @@ const Layout = () => {
         <main className="pt-24">
             <Outlet />
         </main>
+        <Footer />
     </div>
   )
 }

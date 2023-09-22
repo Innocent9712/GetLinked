@@ -7,7 +7,7 @@ import wisper_logo from "../assets/icons/wisper_logo.svg"
 const Partners = () => {
   return (
     <section className="mt-12 lg:mt-24 mb-12 flex justify-center pb-24 border-b border-white border-opacity-25" id="">
-        <div className='w-[80%] max-w-6xl mx-auto flex flex-col items-center gap-12 lg:gap-24'>
+        <div className='w-[80%] max-w-7xl mx-auto flex flex-col items-center gap-12 lg:gap-24'>
             <div className='text-center flex flex-col gap-4'>
                 <h2 className='font-clash-bold text-lg md:text-2xl lg:text-3xl'>Partners and Sponsors</h2>
                 <p className='font-montserrat lg:w-[70%] mx-auto text-sm md:text-base'>Getlinked Hackathon 1.0 is honored to have the following major companies as its partners and sponsors</p>

@@ -4,11 +4,11 @@ import lock_man from "../assets/icons/lock_man.svg"
 
 const Policy = () => {
   return (
-    <section className="mt-12 lg:mt-48 mb-12 flex justify-center pb-24" id="">
-        <div className='w-[80%] max-w-6xl mx-auto flex flex-col lg:flex-row justify-left lg:justify-between gap-48 lg:gap-0'>
+    <section className="mt-12 lg:mt-48 mb-12 lg:mb-32 flex justify-center" id="">
+        <div className='w-[80%] max-w-7xl mx-auto flex flex-col lg:flex-row justify-left lg:justify-between gap-48 lg:gap-0'>
             <div className='font-montserrat lg:basis-[50%] text-center lg:text-left'>
                 <h3 className="font-clash-bold mb-3 md:text-lg lg:text-2xl">Privacy Policy and <br/><span className='text-custom-purple-three'>Terms</span></h3>
-                <p className='text-sm mb:text-base mb-8'>Last updated on September 12, 2023</p>
+                <p className='text-sm mb:text-base mb-8 opacity-75'>Last updated on September 12, 2023</p>
                 <p className='text-sm mb:text-base mb-12'>Below are our privacy & policy, which outline a lot of goodies. it’s our aim to always take of our participant.</p>
                 <div className='border rounded-md border-custom-purple-three p-8'>
                     <p className='text-xs mb:text-sm mb-12 leading-6 lg:text-base lg:leading-7'>At getlinked tech Hackathon 1.0, we value your privacy and are committed to protecting your personal information.This Privacy Policy outlines how we collect, use, disclose, and safeguard your data when you participate in our tech hackathon event. By participating in our event, you consent to the practices described in this policy.</p>
@@ -26,9 +26,9 @@ const Policy = () => {
                     </ul>
                 </div>
             </div>
-            <div className="relative lg:basis-[45%] flex items-center">
-                <img src={security} alt="security icon" className="absolute -top-32 lg:-top-24 left-6 lg:left-20 lg:w-[70%]" />
-                <img src={lock_man} alt="man with the keys" className="relative lg:w-[90%]" />
+            <div className="relative lg:basis-[45%] flex items-center lg:justify-end">
+                <img src={security} alt="security icon" className="absolute -top-32 lg:-top-18 left-6 lg:left-36 w-[90%] lg:w-[70%]" />
+                <img src={lock_man} alt="man with the keys" className="relative w-[90%] lg:w-[85%]" />
             </div>
         </div>
     </section>

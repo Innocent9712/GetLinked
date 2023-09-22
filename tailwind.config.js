@@ -19,6 +19,7 @@ export default {
             "one": "#150E28",
             "two": "#903AFF",
             "three": "#D434FE",
+            "four": "#100B20",
             "gradient": "linear-gradient(90deg, #D434FE 0%, #903AFF 100%)",
           },
           pink: "#FF26B9"

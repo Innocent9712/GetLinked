@@ -195,7 +195,7 @@ const Sample = ({ reverse, image, textItems }) => {
     isInView && controls.start('visible')
 }, [isInView, controls])
   
-console.log(isInView)
+// console.log(isInView)
 
   return (
     <div
