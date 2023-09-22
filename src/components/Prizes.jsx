@@ -26,7 +26,7 @@ const MedalComponent = ({ image, position, reward, color, middle}) => {
 const Prizes = () => {
   return (
     <section className="mt-12 lg:mt-24 mb-12 flex justify-center" id="">
-        <div className='w-[95%] max-w-6xl grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-4 gap-4'>
+        <div className='w-[80%] max-w-6xl grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-4 gap-4'>
             <div className='lg:col-span-2 lg:col-start-3 lg:row-start-1 lg:row-span-1  text-center lg:text-left flex  items-start justify-center'>
                 {/* This is the first div */}
                 <div className='lg:mb-12'>
