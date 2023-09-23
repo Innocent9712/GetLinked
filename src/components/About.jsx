@@ -2,6 +2,12 @@ import idea from "../assets/icons/idea.svg"
 import lazy_lady from "../assets/icons/lazy_lady.svg"
 import decisions from "../assets/icons/decisions.svg"
 import AnimatedSection from './OverviewSection'
+import star_purple from "../assets/icons/star_purple.svg"
+import star_white from "../assets/icons/star_white.svg"
+import star_gray from "../assets/icons/star_gray.svg"
+import squiggle from "../assets/icons/squiggle.svg"
+import StarBlink from "./Star2"
+
 
 const About = () => {
 
@@ -59,6 +65,15 @@ const About = () => {
     ]
   return (
     <section className="relative bg-custom-purple-four bg-opacity-20  mt-6" id="overview">
+        <StarBlink image={star_purple} styles={"w-4 top-12 left-10 md:w-10 lg:w-14 md:top-20 "} />
+        <StarBlink image={star_purple} styles={"w-2 top-[16%] right-6 md:top-[15%] md:w-8 md:right-24 lg:top-[12%]"} />
+        <StarBlink image={star_white} styles={"w-4 top-[28%] left-4 md:left-[30%] lg:top-[10%]"} />
+        <StarBlink image={star_gray} styles={"w-2 top-[42%] right-12 md:right-[50%] md:w-4 md:top-[40%] lg:right-48 lg:w-6"} />
+        <StarBlink image={star_white} styles={"w-4 top-[54%] left-12 lg:top-[42%] lg:left-[28%] lg:w-6"} />
+        <StarBlink image={star_purple} styles={"w-4 top-[56%] left-[50%] md:top-[59%] md:w-6 md:left-[55%]"} />
+        <StarBlink image={star_gray} styles={"w-4 top-[64%] left-[55%] md:top-[70%] md:left-[50%] lg:w-6 lg:left-[15%]"} />
+        <StarBlink image={star_white} styles={"w-4 top-[98%] left-[85%] lg:w-6"} />
+        <img src={squiggle} alt="squiggle design" className="absolute left-[80%] top-[13%] w-12 lg:w-20 lg:top-[28%] lg:left-[50%]" />
         <div className="border-b border-white pb-6 border-opacity-25">
             <AnimatedSection image={idea} textItems={part1} reverse={false} />
         </div>

@@ -13,6 +13,10 @@ import { getCategories, register } from '../api'
 import { validateInput } from '../utils'
 import Loading from '../components/Loading'
 import PopUp from '../components/PopUp'
+import star_purple from "../assets/icons/star_purple.svg"
+import star_white from "../assets/icons/star_white.svg"
+import star_gray from "../assets/icons/star_gray.svg"
+import StarBlink from "../components/Star2";
 
 const SignUp = () => {
     const [categories, setCategories] = useState([])
@@ -126,6 +130,13 @@ const SignUp = () => {
 
   return (
     <div className="relative min-h-screen bg-custom-purple-one font-montserrat pb-24">
+        <StarBlink image={star_purple} styles={"w-3 top-[25%] left-[85%] md:w-4 lg:w-8 lg:left-[15%] lg:top-[18%]"} />
+        <StarBlink image={star_gray} styles={"w-3 top-[45%] left-[1%] md:w-4 lg:w-8 lg:left-[75%] lg:top-[25%]"} />
+        <StarBlink image={star_purple} styles={"w-3 top-[75%] left-[95%] md:w-4 lg:left-[40%] lg:top-[70%]"} />
+        <MediaQuery minWidth={1024}>
+            <StarBlink image={star_gray} styles={"w-5 top-[80%] left-[15%]"} />
+            <StarBlink image={star_white} styles={"w-4 top-[90%] left-[80%]"} />
+        </MediaQuery>
         {
             success &&
             <PopUp>

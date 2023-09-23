@@ -1,8 +1,14 @@
-# React + Vite
+# GetLinked Hackathon Submission
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To run the application locally, clone this repository.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+rename the .env.example file to .env and fill in the required fields.
+
+run the command `npm install`
+
+run the command `npm run dev`
+
+you can then visit the running application on `http://localhost:5173`
+

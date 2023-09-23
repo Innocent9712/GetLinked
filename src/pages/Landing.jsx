@@ -29,7 +29,7 @@ const Landing = () => {
     <div>
       <div className="relative">
         <div className="absolute top-36 md:top-24 -left-12 md:left-0 z-[-100px]">
-          <img src={flare_1} alt="lens flare" className=" opacity-70" />
+          <img src={flare_1} alt="lens flare" className="opacity-70" />
         </div>
         <MediaQuery minWidth={768}>
           <img src={flare_2} alt="lens flare" className="absolute top-0 md:right-0 z-[-10px] opacity-60" />
@@ -38,9 +38,9 @@ const Landing = () => {
       </div>
       <div className="relative">
         <img src={overview_flare_1} alt="lens flare" className="absolute top-[45rem] lg:top-[45rem] -left-12 z-[-10px] opacity-60" />
-        <img src={overview_flare_2} alt="lens flare" className="absolute top-[50rem] lg:top-[70rem] lg:right-0 z-[-10px] opacity-60" />
+        <img src={overview_flare_2} alt="lens flare" className="absolute top-[50rem] lg:top-[70rem] md:right-0 z-[-10px] opacity-60" />
         <img src={overview_flare_3} alt="lens flare" className="absolute top-[100rem] lg:top-[110rem] left-0 z-[-10px] opacity-60" />
-        <img src={overview_flare_4} alt="lens flare" className="absolute top-[150rem] lg:top-[130rem] lg:right-0 z-[-10px] opacity-60" />
+        <img src={overview_flare_4} alt="lens flare" className="absolute top-[150rem] lg:top-[130rem] md:right-0 z-[-10px] opacity-60" />
 
         <About />
       </div>

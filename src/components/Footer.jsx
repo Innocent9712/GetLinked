@@ -1,8 +1,16 @@
 import { Link } from 'react-scroll'
+import star_purple from "../assets/icons/star_purple.svg"
+import star_white from "../assets/icons/star_white.svg"
+import star_gray from "../assets/icons/star_gray.svg"
+import StarBlink from "./Star2";
 
 const Footer = () => {
   return (
-    <footer className='bg-custom-purple-four bg-blend-multiply bg-opacity-80 py-16 font-montserrat text-sm'>
+    <footer className='relative bg-custom-purple-four bg-blend-multiply bg-opacity-80 py-16 font-montserrat text-sm'>
+        <StarBlink image={star_white} styles={"w-3 top-8 left-6 md:w-4 lg:w-6"} />
+        <StarBlink image={star_gray} styles={"w-3 top-[45%] left-48 md:w-4 md:left-[90%] lg:left-[60%]"} />
+        <StarBlink image={star_white} styles={"w-2 top-[75%] left-72 md:w-4 md:left-12 lg:left-[90%] lg:top-[50%]"} />
+        <StarBlink image={star_purple} styles={"w-2 top-[85%] left-24 md:w-4 md:left-[85%] lg:left-[30%]"} />
         <div className='w-[80%] max-w-[90rem] mx-auto'>
             <div className='flex flex-wrap gap-y-16 mb-24 justify-between'>
                 <div className='basis-full lg:basis-[50%]'>

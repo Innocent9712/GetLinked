@@ -8,6 +8,10 @@ import { contact } from "../api"
 import { validateInput } from "../utils"
 import PopUp from '../components/PopUp'
 import Loading from '../components/Loading'
+import star_purple from "../assets/icons/star_purple.svg"
+import star_white from "../assets/icons/star_white.svg"
+import star_gray from "../assets/icons/star_gray.svg"
+import StarBlink from "../components/Star2";
 
 
 const Contact = () => {
@@ -70,6 +74,10 @@ const Contact = () => {
 
   return (
     <div className="relative min-h-screen bg-custom-purple-one font-montserrat">
+        <StarBlink image={star_purple} styles={"w-3 top-[15%] left-[60%] md:w-4 lg:w-5 lg:left-[16%] lg:top-[20%]"} />
+        <StarBlink image={star_gray} styles={"w-3 top-[25%] left-[80%] md:w-4 lg:left-[80%] lg:top-[16%]"} />
+        <StarBlink image={star_white} styles={"w-3 top-[75%] left-[90%] md:w-4 lg:w-8 lg:left-[85%] lg:top-[85%]"} />
+        <StarBlink image={star_purple} styles={"w-3 top-[80%] left-[10%] md:w-4 lg:w-8 lg:left-[48%] lg:top-[76%]"} />
         {
             success &&
             <PopUp>
@@ -94,7 +102,7 @@ const Contact = () => {
       <MediaQuery maxWidth={780}>
 
         <div className="relative w-[80%] max-w-[90rem] mx-auto pt-12 mb-12">
-            <div className="inline-block p-[0.1rem] rounded-full bg-gradient-to-r from-custom-purple-three to-custom-purple-two">
+            <div className="p-[0.1rem] rounded-full bg-gradient-to-r from-custom-purple-three to-custom-purple-two inline-block md:pb-[0.2rem]">
               <button className="p-1 w-8 h-8 rounded-full">
                 <Link to={"/"}>
                   <i className="ri-arrow-left-s-line"></i>

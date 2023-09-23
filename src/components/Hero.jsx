@@ -1,8 +1,12 @@
 import hero_stroke from "../assets/icons/hero_stroke.svg"
 import chain from "../assets/icons/chain.svg"
 import blast from "../assets/icons/blast.svg"
+import bulb from "../assets/icons/bulb.svg"
+import star_white from "../assets/icons/star_white.svg"
+import star_gray from "../assets/icons/star_gray.svg"
 import hero_img from "../assets/images/digital_sage.png"
 import { useEffect, useState } from "react";
+import StarBlink from "./Star2"
 
 const Hero = () => {
   const [countdown, setCountdown] = useState(generateRandomTime()); // Initial countdown value in seconds
@@ -47,14 +51,18 @@ const Hero = () => {
 
   return (
     <section className="mt-12 relative border-b border-white border-opacity-25">
+      <StarBlink image={star_white} styles={"w-4 top-12 left-24 md:w-8 lg:left-48"} />
+      <StarBlink image={star_gray} styles={"w-8 top-[40%] right-8 md:top-[75%] md:left-[40%]"} />
       <div className="max-w-[104rem] ml-auto relative">
           <div className="flex justify-center md:justify-end">
               <h2 className='relative w-fit md:mr-12 lg:mr-36 font-montserrat italic font-bold text-base md:text-lg lg:text-4xl'>
                   Igniting a Revolution in HR Innovation
-                  <img src={hero_stroke} alt="selective underline" className='absolute -bottom-2 right-0 lg:right-2 w-32  md:w-36 lg:w-64' />
+                  <img src={hero_stroke} alt="selective underline" className='absolute -bottom-2 right-0 lg:right-2 w-32 md:w-36 lg:w-64' />
+                  <StarBlink image={star_gray} styles={"w-2 top-12 right-8 md:w-4 md:top-24 md:right-[70%] lg:right-0 lg:left-[10%] lg:top-56 lg:w-8"} />
               </h2>
           </div>
-          <div className="mt-8 md:flex md:justify-end">
+          <div className="mt-20 md:flex md:justify-end relative">
+              <img src={bulb} alt="idea" className="absolute w-6 right-24 -top-8 md:w-10  md:left-[16rem] md:top-10 lg:w-20 lg:left-[35rem]" />
               <div className="flex flex-col items-center md:items-start md:absolute md:left-12 md:top-24 lg:top-48">
                   <h2 className="font-clash-bold flex flex-col items-center text-3xl md:text-4xl lg:text-[5.5rem] md:items-start lg:gap-12">
                       <span>

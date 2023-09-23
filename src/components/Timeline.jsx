@@ -2,6 +2,10 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react'
 import MediaQuery from "react-responsive"
+import star_purple from "../assets/icons/star_purple.svg"
+import star_white from "../assets/icons/star_white.svg"
+import star_gray from "../assets/icons/star_gray.svg"
+import StarBlink from "./Star2";
 
 const TimelineItem = ({title, content, date, step, reverse}) => {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -65,7 +69,10 @@ const TimelineItem = ({title, content, date, step, reverse}) => {
 
 const Timeline = () => {
   return (
-    <section className="mt-12 lg:mt-24 mb-12" id="timeline">
+    <section className="relative mt-12 lg:mt-24 mb-12" id="timeline">
+        <StarBlink image={star_purple} styles={"w-3 top-[10%] left-[20%] md:w-4 lg:w-5 lg:left-[25%] "} />
+        <StarBlink image={star_white} styles={"w-3 top-[50%] left-[90%] md:w-4 lg:w-6"} />
+        <StarBlink image={star_gray} styles={"w-3 top-[99%] left-[5%] md:w-4 lg:w-5 lg:left-[20%]"} />
         <div>
             <div className='w-[80%] max-w-4xl flex flex-col items-center justify-center mx-auto gap-4'>
                 <h3 className='font-clash-bold text-xl'>Timeline</h3>

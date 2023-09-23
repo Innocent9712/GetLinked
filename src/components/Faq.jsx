@@ -1,6 +1,10 @@
 import chill_guy from "../assets/icons/chill_guy.svg"
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import star_purple from "../assets/icons/star_purple.svg"
+import star_white from "../assets/icons/star_white.svg"
+import star_gray from "../assets/icons/star_gray.svg"
+import StarBlink from "./Star2";
 
 const questions = [
   {
@@ -98,7 +102,12 @@ const QuestionList = () => {
 
 const Faq = () => {
   return (
-    <section className="mt-12 lg:mt-24 border-b border-white pb-6 border-opacity-25" id="faqs">
+    <section className="relative mt-12 lg:mt-24 border-b border-white pb-6 border-opacity-25" id="faqs">
+        <StarBlink image={star_purple} styles={"w-4 top-2 left-12"} />
+        <StarBlink image={star_purple} styles={"w-2 top-[60%] left-[50%] md:top-[26%] md:w-3 md:left-[75%] lg:w-4 lg:top-[5%] lg:left-[60%]"} />
+        <StarBlink image={star_purple} styles={"w-2 top-[70%] left-[20%] md:top-[40%] md:w-3 md:left-[55%] lg:w-4 lg:top-[25%] lg:left-[50%]"} />
+        <StarBlink image={star_gray} styles={"w-2 top-[75%] left-[15%] md:top-[47%] md:w-3 md:left-[50%] lg:w-4 lg:top-[45%] lg:left-[47%]"} />
+        <StarBlink image={star_white} styles={"w-2 top-[95%] left-[90%] md:top-[70%] md:w-4 md:left-[90%] lg:w-6"} />
       <div className="flex flex-col md:flex-row md:justify-center items-center max-w-[90rem] mx-auto ">
         <div className="md:basis-5/12">
           <h3 className="font-clash-bold text-lg md:text-2xl lg:text-4xl text-center lg:text-left">Frequently Asked <br/> <span className="text-custom-purple-three">Questions</span></h3>

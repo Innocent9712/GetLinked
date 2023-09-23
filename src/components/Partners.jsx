@@ -4,9 +4,16 @@ import winwise_logo from "../assets/icons/winwise_logo.svg"
 import paybox_logo from "../assets/icons/paybox_logo.svg"
 import vizualplus_logo from "../assets/icons/vizualplus_logo.svg"
 import wisper_logo from "../assets/icons/wisper_logo.svg"
+import star_purple from "../assets/icons/star_purple.svg"
+import star_white from "../assets/icons/star_white.svg"
+import StarBlink from "./Star2"
+
 const Partners = () => {
   return (
-    <section className="mt-12 lg:mt-24 mb-12 flex justify-center pb-24 border-b border-white border-opacity-25" id="">
+    <section className="relative mt-12 lg:mt-24 mb-12 flex justify-center pb-24 border-b border-white border-opacity-25" id="">
+        <StarBlink image={star_purple} styles={"w-2 top-[35%] left-12 md:w-3 md:top-[25%] md:left-[20%] lg:w-6 lg:left-[15%] lg:top-[30%]"} />
+        <StarBlink image={star_purple} styles={"w-2 top-[40%] left-[50%] md:w-4 md:top-[35%] lg:w-6 lg:left-[55%] "} />
+        <StarBlink image={star_white} styles={"w-3 top-[72%] left-[70%] md:w-5 md:top-[75%] lg:w-7 lg:left-[50%] lg:top-[80%] "} />
         <div className='w-[80%] max-w-7xl mx-auto flex flex-col items-center gap-12 lg:gap-24'>
             <div className='text-center flex flex-col gap-4'>
                 <h2 className='font-clash-bold text-lg md:text-2xl lg:text-3xl'>Partners and Sponsors</h2>
