@@ -94,7 +94,7 @@ const Hero = () => {
                       </p>
                   </div>
               </div>
-              <div className="mt-8 relative -z-1 md:basis-[50%]">
+              <div className="mt-8 relative -z-1 md:basis-[50%] w-[90%] mx-auto lg:w-full">
                 {/* <div className="absolute top-0 left-0 w-full h-full bg-[#2b3191] opacity-30 z-[9px] mix-blend-hue"></div> */}
                 <img src={hero_img} alt="Hero Image" className="w-full" />
               </div>

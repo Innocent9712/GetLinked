@@ -15,11 +15,11 @@ const MedalComponent = ({ image, position, reward, color, middle}) => {
     return (
         <li className={`basis-1/3 ${middle ? "" : "mb-8"}`}>
             <div className={`relative rounded-md border border-${color} bg-${color} w-full bg-opacity-30`}>
-                <div className={` absolute inset-1/2 transform -translate-x-1/2  w-full ${middle ? "w-[9rem] top-[-6.5rem] lg:w-56 lg:top-[-9.5rem]" : "top-[-5rem] lg:top-[-7rem]"}`}>
+                <div className={` absolute inset-1/2 transform -translate-x-1/2  ${middle ? "w-[9rem] top-[-6.5rem] lg:w-56 lg:top-[-9.5rem]" : "w-full md:w-[8rem] top-[-4rem] lg:top-[-7rem]"}`}>
                 {/* <div> */}
                     <img src={image} alt={reward} className={`w-full`} />
                 </div>
-                <h3 className={`${middle? "mt-16 lg:mt-[6rem]" : "mt-10 lg:mt-20"} text-center text-lg lg:text-2xl font-montserrat font-bold`}>{position}</h3>
+                <h3 className={`${middle? "mt-16 md:mt-20 lg:mt-[6rem]" : "mt-10 md:mt-16 lg:mt-20"} text-center text-lg lg:text-2xl font-montserrat font-bold`}>{position}</h3>
                 <h4 className='my-2 text-center font-montserrat'>Runner</h4>
                 <p className={`text-${color} text-center mt-2 mb-6 lg:text-xl font-bold font-montserrat`}>{reward}</p>
 

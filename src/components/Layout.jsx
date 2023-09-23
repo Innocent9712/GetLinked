@@ -10,7 +10,7 @@ const Layout = () => {
   return (
     <div className="bg-custom-purple-one min-h-screen">
         <div className="absolute top-0 left-0 w-full h-full bg-custom-purple-one opacity-30 z-[9px] mix-blend-hue"></div>
-        <div className="fixed top-0 bg-custom-purple-one w-full z-10">
+        <div className="fixed top-0 bg-custom-purple-one w-screen z-10">
           <Header />
         </div>
         <main className="pt-24">
