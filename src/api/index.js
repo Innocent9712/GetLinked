@@ -3,6 +3,7 @@ import axios from "axios";
 
 
 export const axiosInstance = axios.create({
+    // baseURL: `${import.meta.env.VITE_BASEURL}/hackathon`,
     baseURL: `${import.meta.env.VITE_BASEURL}/hackathon`,
     headers: {
       'Content-Type': 'application/json',
