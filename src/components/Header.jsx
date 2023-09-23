@@ -1,16 +1,18 @@
 import MediaQuery from "react-responsive"
-import { Link, NavLink } from "react-router-dom"
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom"
 import hamburger from "../assets/icons/hamburger.svg"
 import cancel from "../assets/icons/cancel.svg"
 import {motion} from "framer-motion"
 import { useCallback, useEffect, useRef, useState } from "react"
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink, scroller } from 'react-scroll';
 
 const Header = () => {
 
   const [isHidden, setIsHidden] = useState(true);
-const mobileNavRef = useRef();
-const buttonRef = useRef();
+  const mobileNavRef = useRef();
+  const buttonRef = useRef();
+  const location = useLocation();
+  const navigate = useNavigate()
 
   const variants = {
     hidden: {
@@ -28,6 +30,16 @@ const buttonRef = useRef();
       },
     },
   };
+
+  const handleLinkClicked = (section) => {
+    // check if location is /
+    if (location.pathname !== "/") {
+        navigate("/")
+        setTimeout(() => {
+            scroller.scrollTo(section, {smooth: true})    
+        }, 1000);
+    }
+  }
 
 //   const toggleAnimation = () => {
 //     setIsHidden(!isHidden);
@@ -66,29 +78,38 @@ const buttonRef = useRef();
                 <MediaQuery minWidth={768}>
                     <ul className="font-montserrat flex gap-6 lg:gap-12 text-sm">
                         <li className="hover:cursor-pointer focus:cursor-pointer" tabIndex={1}>
-                            <ScrollLink to={"timeline"} smooth={true} duration={500} className={"text-white"} >
+                            <ScrollLink to={"timeline"} smooth={true} duration={500} className={"text-white"} onClick={() => handleLinkClicked("timeline")} >
                                 Timeline
                             </ScrollLink>
                         </li>
                         <li className="hover:cursor-pointer focus:cursor-pointer" tabIndex={1}>
-                            <ScrollLink to={"overview"} smooth={true} duration={500} className={"text-white"} >
+                            <ScrollLink to={"overview"} smooth={true} duration={500} className={"text-white"} onClick={() => handleLinkClicked("overview")} >
                                 Overview
                             </ScrollLink>
                         </li>
                         <li className="hover:cursor-pointer focus:cursor-pointer" tabIndex={1}>
-                            <ScrollLink to={"faqs"} smooth={true} duration={500} className={"text-white"} >
+                            <ScrollLink to={"faqs"} smooth={true} duration={500} className={"text-white"} onClick={() => handleLinkClicked("faqs")} >
                                 FAQs
                             </ScrollLink>
                         </li>
                         <li>
-                            <NavLink to={"contact"} className={({isActive}) => `${isActive ? "bg-clip-text text-transparent bg-gradient-to-r from-custom-purple-three to-custom-purple-two font-bold": "text-white"}`} >
+                            <NavLink to={"/contact"} className={({isActive}) => `${isActive ? "bg-clip-text text-transparent bg-gradient-to-r from-custom-purple-three to-custom-purple-two font-bold": "text-white"}`} >
                                 Contact
                             </NavLink>
                         </li>
                     </ul>
-                    <button className="bg-gradient-to-r from-custom-purple-three to-custom-purple-two text-white px-8 py-1  lg:py-2 lg:px-12 rounded-sm">
-                        Register
-                    </button>
+                    <NavLink to={"/register"} >
+                        {
+                            ({isActive}) => (
+                                <div className={`inline-block p-[0.15rem] rounded-md bg-gradient-to-r from-custom-purple-three to-custom-purple-two`}>
+                                    <button className={`px-8 py-1 lg:py-2 lg:px-12 rounded-md text-white ${isActive ? "bg-custom-purple-one" :"bg-gradient-to-r from-custom-purple-three to-custom-purple-two"}`}>
+                                            Register
+                                    </button>
+                                </div>
+
+                            )
+                        }
+                    </NavLink>
                 </MediaQuery>
                 <MediaQuery maxWidth={767}>
                     <button
@@ -137,9 +158,18 @@ const buttonRef = useRef();
                                 </NavLink>
                             </li>
                         </ul>
-                        <button className="bg-gradient-to-r from-custom-purple-three to-custom-purple-two text-white py-2 px-12 rounded-sm">
-                            Register
-                        </button>
+                        <NavLink to={"/register"} >
+                        {
+                            ({isActive}) => (
+                                <div className={`inline-block p-[0.15rem] rounded-md bg-gradient-to-r from-custom-purple-three to-custom-purple-two`}>
+                                    <button className={`px-8 py-1 lg:py-2 lg:px-12 rounded-md text-white ${isActive ? "bg-custom-purple-one" :"bg-gradient-to-r from-custom-purple-three to-custom-purple-two"}`}>
+                                            Register
+                                    </button>
+                                </div>
+
+                            )
+                        }
+                    </NavLink>
                     </motion.div>
 
                 </MediaQuery>

@@ -3,6 +3,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import Layout from './components/Layout'
 import Landing from './pages/Landing'
 import Contact from './pages/Contact'
+import SignUp from './pages/SignUp'
 
 function App() {
 
@@ -10,8 +11,9 @@ function App() {
     <>
       <Route path="/" element={<Layout />}>
         <Route index element={<Landing />} />
-        <Route path='contact' element={<Contact />} />
       </Route>
+      <Route path='contact' element={<Contact />} />
+      <Route path='register' element={<SignUp />} />
     </>
   ))
 
