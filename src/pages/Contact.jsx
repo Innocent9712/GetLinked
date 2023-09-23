@@ -4,10 +4,15 @@ import { Link } from "react-router-dom"
 import contact_flare_1 from "../assets/images/lens-flare-contact-1.png"
 import contact_flare_2 from "../assets/images/lens-flare-contact-2.png"
 import Header from "../components/Header"
+import { contact } from "../api"
+import { validateInput } from "../utils"
+import PopUp from '../components/PopUp'
+import Loading from '../components/Loading'
 
 
 const Contact = () => {
-
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
   const [data, setData] = useState({
     first_name: "",
     email: "",
@@ -21,8 +26,70 @@ const Contact = () => {
     })
   }
 
+  const handleContact = async () => {
+    const checkData = [
+      {
+        type: "text",
+        name: "First Name",
+        data: data.first_name,
+      },
+      {
+        type: "email",
+        name: "Email",
+        data: data.email
+      },
+      {
+        type: "text",
+        name: "Message",
+        data: data.message
+      }
+    ]
+
+    const checkInputs = validateInput(checkData)
+    // console.log(checkInputs)
+    if(!checkInputs.status) {
+        alert(`Error! check the ${checkInputs.issue} field.`)
+        return;
+    }
+
+    setLoading(true)
+    const response = await contact(data)
+    console.log(response)
+
+    if (response.status == 201) {
+      setSuccess(true)
+      setData({
+        first_name: "",
+        email: "",
+        message: ""
+      })
+    }
+    setLoading(false)
+
+  }
+
   return (
     <div className="relative min-h-screen bg-custom-purple-one font-montserrat">
+        {
+            success &&
+            <PopUp>
+                <div className='flex flex-col items-center w-full'>
+                    <h2 className='text-center w-[90%] font-bold my-4 lg:text-2xl'>Sent!</h2>
+                    <p className='text-xs text-center w-[80%] leading-5 lg:text-sm'>Your message has been sent successfully.<br />
+                        <span>
+                            You would be hearing back from us soon.
+                        </span>
+                    </p>
+                    <button 
+                            className="bg-gradient-to-r from-custom-purple-three to-custom-purple-two text-white py-2 px-10 rounded-sm mx-auto block lg:w-[80%] mt-8"
+                            onClick={() => setSuccess(false)}
+                        >
+                            Back
+                        </button>
+                    {/* <p className='text-xs text-center w-[60%] flex'>Yes, it was easy and you did it! check your mail box for next step 😉.</p> */}
+                </div>
+            </PopUp>
+        }
           <img src={contact_flare_1} alt="lens flare" className="absolute opacity-70 top-0 left-0" />
       <MediaQuery maxWidth={780}>
 
@@ -104,8 +171,13 @@ const Contact = () => {
               value={data.message}
               onChange={(e) => handleChange(e)}
             ></textarea>
-            <button  className="bg-gradient-to-r from-custom-purple-three to-custom-purple-two text-white py-2 px-12 rounded-sm mx-auto block">
-              Submit
+            <button 
+              className="bg-gradient-to-r from-custom-purple-three to-custom-purple-two text-white py-2 px-12 rounded-sm mx-auto block"
+              onClick={handleContact}
+            >
+                {
+                  loading ? <Loading /> :  "Submit"
+                }
             </button>
           </div>
         </div>
@@ -139,8 +211,13 @@ const Contact = () => {
               value={data.message}
               onChange={(e) => handleChange(e)}
             ></textarea>
-            <button  className="bg-gradient-to-r from-custom-purple-three to-custom-purple-two text-white py-2 px-10 rounded-sm mx-auto block">
-              Submit
+            <button 
+              className="bg-gradient-to-r from-custom-purple-three to-custom-purple-two text-white py-2 px-10 rounded-sm mx-auto block"
+              onClick={handleContact}
+            >
+                {
+                  loading ? <Loading /> :  "Submit"
+                }
             </button>
           </div>
           <div className="flex flex-col items-center">
