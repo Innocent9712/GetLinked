@@ -1,4 +1,5 @@
 import { Link } from 'react-scroll'
+import {Link as RouterLink } from 'react-router-dom'
 import star_purple from "../assets/icons/star_purple.svg"
 import star_white from "../assets/icons/star_white.svg"
 import star_gray from "../assets/icons/star_gray.svg"
@@ -37,7 +38,9 @@ const Footer = () => {
                             </Link>
                         </li>
                         <li className="hover:cursor-pointer focus:cursor-pointer" >
-                            Register
+                            <RouterLink to={'/register'}>
+                                Register
+                            </RouterLink>
                         </li>
                     </ul>
                     <div className='mt-4 flex items-center gap-4'>

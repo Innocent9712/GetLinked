@@ -7,10 +7,11 @@ import star_gray from "../assets/icons/star_gray.svg"
 import hero_img from "../assets/images/digital_sage.png"
 import { useEffect, useState } from "react";
 import StarBlink from "./Star2"
+import { useNavigate } from "react-router-dom"
 
 const Hero = () => {
   const [countdown, setCountdown] = useState(generateRandomTime()); // Initial countdown value in seconds
-
+  const navigate = useNavigate()
   function generateRandomTime() {
     // Generate a random time between 2 and 12 hours (in seconds)
     return Math.floor(Math.random() * (12 - 2 + 1) + 2) * 3600;
@@ -75,7 +76,10 @@ const Hero = () => {
                       </span>
                   </h2>
                   <p className="font-montserrat text-white leading-6 mt-4 text-sm md:text-start lg:text-xl lg:mt-8">Participate in getlinked tech Hackathon <br /> 2023 stand a chance to win a Big prize</p>
-                  <button className="bg-gradient-to-r from-custom-purple-three to-custom-purple-two text-white py-2 px-12 rounded-sm mx-auto block mt-8 md:mr-auto md:mx-0">
+                  <button
+                    className="bg-gradient-to-r from-custom-purple-three to-custom-purple-two text-white py-2 px-12 rounded-sm mx-auto block mt-8 md:mr-auto md:mx-0"
+                    onClick={() => navigate('/register')}
+                  >
                       Register
                   </button>
                   <div className="mt-8">
